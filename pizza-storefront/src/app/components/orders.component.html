@@ -1,0 +1,16 @@
+<h2>Orders for {{email}}</h2>
+
+<div *ngIf="orders.length < 1">
+    <p>You do not have any orders!</p>
+</div>
+
+<table *ngFor="let o of orders">
+    <tr>
+        Order Id: {{o.orderId}}
+    </tr>
+    <tr>
+        ${{o.amount}}
+    </tr>
+</table>
+
+<button type="button" (click)="goBack()">Back to Ordering</button>
